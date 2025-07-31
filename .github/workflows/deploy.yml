@@ -16,32 +16,8 @@ jobs:
     - name: Copy files to EC2 via SCP
       uses: appleboy/scp-action@master
       with:
-        host: ${{ secrets.ec2-52-66-243-164.ap-south-1.compute.amazonaws.com }}
+        host: ${{ secrets.EC2_HOST }}
         username: ubuntu
-        key: ${{ secrets.MIIEpAIBAAKCAQEAwso6u8xbdYGsjB1Wy9tn2SkK0qtmoeejtUFsMTIxvI9tEF7o
-H0aqsCJ6szoMDelgM/N5QvaSp0Mgig8kiormrO+v3sNiYHVs1HmPPdnakZKqGKLN
-qBqVmk7fVGFeu5IwR7gSt2HUlM+aaA2GKc426Cy84GWDKI87uEPSHrx8BRxR/blo
-cDykcAjRROUAJ6kL5tkrgkztEK5Zi5OoJ+1qFiw9g35kYrEdpbx12tS9fusWzCiA
-FhN8gmmmtvbT0cv9/M5ptPcd2VvXgdhYxT6Z9Z3PnFBzm2E0i2OiLUQtbQj7wqFU
-k733D9eRIbD/HRbI53HYPx/JJeJe5vre2S6k7wIDAQABAoIBADNFS4RW29PoF+Sh
-bFEoJQNx3BlraA5BjEOPPs0MKy84iTp/4JUq4o6N5MH8C2Q2A05pTYekoyFHd+8e
-4T1eJi1qwV3fC6vb/JNIk71x9CfQ9NibMYqHxMzi6cGqB2dTqUWXW8XNCElLA5dT
-x/aFAsrFy8k8rvMkEFIF9+6DKhmlzlIqnuqc1FI20+IpnfSwFPzC3pA7iBMsecqc
-LggLFG+kBANbBRaNTJDhpVsFH+xVhPeZXSQ6cN/3qDuEa9PA+dGUezLVeF8fYy0B
-JclrO3lSDxMUrxUrmTQGhwwf7lHR9WTQb06KIwV6v95Mozr2g03bBI8ElRGhmjUB
-RgM6CnECgYEA+ntHGlQdgd6oyZN7FffaKvzT3/goZWe1L/zyPFyxEeOxSqvImUke
-MVcHbubBy8yHdBlwnJHFNAJYdO3yGCbhFmZxsRyOlDDtw1l0upnWbiM1x4BSTqlw
-zkuX/uKSIT+ObWixEt+UUy9rDZwFgIyhY6BUXNDLQbVLvjyX47/ZoIsCgYEAxxTZ
-hSZsvMaTjhqzQVN7++G95Gkx+I6E6qWLeigApgpJB7Ao1LkTIQxWQG+ZkFnFAAdd
-M6l5CZH0/pFbSwZppkfSRs7Va4XTSX0u86SUeM5+0ilph0BRH/CrY2Dpg9sUZ7mD
-rmG3dpbCNoN+4/2hM3ejmuwShFHyjXPt7tVNVa0CgYEAkcJVQQv708w3Wn35HXKK
-wYM45FdrYn80H8XJTLj/zZI7ZGGMrS6wZDPpvm6IDclqdXQsZOAq6rYGtZyVydou
-F7Prqw4cJj5Gzevrkn7dGmBg9kRFIUNWwqWYwJkmQjTS8/X9PSdgD/xDBrtpNEIh
-1HDDRvO1o/oVJpHqLX1B7jsCgYBVX9qcoErXde1Hbqna5PtxnHB76KT2a+ASZKX4
-3/jPO+/vrRsFhszuSkUe4v0fC3BRP9c3VYFDmmVPWnSlKv3Zwkkp9n9N2hkvFdEx
-yS2m1R9L71iDGRDxOpu1RZU+54/Ln6IaAWvVHnfxOtkK2vTrhm4R/RU/y4jSIpox
-5yWADQKBgQC9NiUb5TIMspZEZdxh+WQyoM0IUY0O3tlClP3176EPXAINWJG62I+n
-ahHPFVu3Gots1HsPB1rLoNf7u/7cVw2vWplDjGRdV/kZx87mU6Mjon18kgM8d7l6
-W/ewNH+RDpDOmh5IBw7qaRXL4oudsnSNDugiUzJDuVaHCKjOyFJDeA==}
+        key: ${{ secrets.EC2_SSH_KEY }}
         source: "."
         target: "/home/ubuntu/myapp"
